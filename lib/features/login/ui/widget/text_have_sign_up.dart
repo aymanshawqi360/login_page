@@ -11,8 +11,8 @@ class TexthaveSignUp extends StatelessWidget {
         text: TextSpan(children: [
       TextSpan(
           text: "Don\'t have an account?",
-          style: TextStyles.font11DarkBlueRegular),
-      TextSpan(text: "Sign Up", style: TextStyles.font11BlueRegular),
+          style: TextStyles.font13DarkBlueRegular),
+      TextSpan(text: "Sign Up", style: TextStyles.font13BlueSemiBold),
     ]));
   }
 }

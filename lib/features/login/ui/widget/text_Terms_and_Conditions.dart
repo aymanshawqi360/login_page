@@ -23,27 +23,8 @@ class TextTermsAndConditions extends StatelessWidget {
               style: TextStyles.font13SpanishGrayRegular.copyWith(height: 1.5)),
           TextSpan(
             text: " PrivacyPolicy.",
-            style: TextStyles.font11BlueRegular,
+            style: TextStyles.font13DarkBlueMedium,
           ),
         ]));
   }
 }
-// Wrap(
-//       alignment: WrapAlignment.center,
-//       children: [
-//         Text(
-//           "By logging, you agree to our ",
-//           style: TextStyles.font13SpanishGrayRegular,
-//         ),
-//         Text(
-//           " Terms & Conditions",
-//           style: TextStyles.font11DarkBlueMedium,
-//         ),
-//         Text(" and",
-//             style: TextStyles.font13SpanishGrayRegular.copyWith(height: 1.5)),
-//         Text(
-//           "PrivacyPolicy.",
-//           style: TextStyles.font11DarkBlueMedium,
-//         ),
-//       ],
-//     );
