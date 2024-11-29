@@ -5,12 +5,15 @@ import 'package:login_app/core/theming/colors.dart';
 import '../theming/styles.dart';
 
 class AppTextButton extends StatelessWidget {
-  const AppTextButton({super.key});
+  final String textButton;
+  final VoidCallback onPressed;
+  const AppTextButton(
+      {super.key, required this.textButton, required this.onPressed});
 
   @override
   Widget build(BuildContext context) {
     return TextButton(
-      onPressed: () {},
+      onPressed: onPressed,
       style: ButtonStyle(
         backgroundColor: WidgetStateProperty.all(ColorManager.bule),
         minimumSize: WidgetStateProperty.all(const Size(double.maxFinite, 52)),
@@ -21,7 +24,7 @@ class AppTextButton extends StatelessWidget {
         // alignment: AlignmentDirectional.center,
       ),
       child: Text(
-        "Login",
+        textButton,
         style: TextStyles.font16WhiteMedium,
       ),
     );
