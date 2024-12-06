@@ -1,8 +1,13 @@
-class ApiConstants {
-  static const String apiBaseUrl =
-      "https://food-api-omega.vercel.app/api/v1/user/";
+import 'dart:io';
 
-  static const String signIn = "signin";
+import 'package:dio/dio.dart';
+import 'package:image_picker/image_picker.dart';
+
+class ApiConstants {
+  static const String apiBaseUrl = "https://food-api-omega.vercel.app/api/v1/";
+
+  static const String login = "user/signin";
+  static const String signUp = "user/signup";
 }
 
 class ApiErrors {
@@ -21,4 +26,18 @@ class ApiErrors {
   static const String loadingMessage = "loading_message";
   static const String retryAgainMessage = "retry_again_message";
   static const String ok = "Ok";
+}
+
+Future uploadImageToAPI(XFile iamge) async {
+  return MultipartFile.fromFile(iamge.path,
+      filename: iamge.path.split('/').last);
+}
+
+Future convertImageToBase64(File filePath) async {
+  // File file = File(filePath.path);
+  // final bytes = await file.readAsBytes();
+
+  // String picture = base64Encode(filePath.readAsBytesSync());
+  String fil = filePath.path.split("/").last;
+  return fil; // تحويل الصورة إلى Base64
 }
