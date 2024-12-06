@@ -4,7 +4,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:login_app/core/helpers/spacing.dart';
 import 'package:login_app/core/theming/styles.dart';
 import 'package:login_app/core/widgets/app_text_button.dart';
-import 'package:login_app/features/login/data/model/login_request_body.dart';
 import 'package:login_app/features/login/logic/cubit/login_cubit.dart';
 import 'package:login_app/features/login/ui/widget/email_and_password.dart';
 import 'package:login_app/features/login/ui/widget/login_bloc_listener.dart';
@@ -18,7 +17,7 @@ class LoginScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      resizeToAvoidBottomInset: false,
+      // resizeToAvoidBottomInset: false,
       body: SafeArea(
         child: SingleChildScrollView(
           child: Padding(
@@ -28,12 +27,12 @@ class LoginScreen extends StatelessWidget {
               children: [
                 Text(
                   "Welcome Back",
-                  style: TextStyles.font28BlueBold,
+                  style: TextStyles.font24BlueBold,
                 ),
                 verticalSpace(8),
                 Text(
                   "We're excited to have you back, can't wait to\nsee what you've been up to since you last\nlogged in.",
-                  style: TextStyles.font14GruyRegular.copyWith(height: 1.7),
+                  style: TextStyles.font13GruyRegular.copyWith(height: 1.3),
                 ),
                 verticalSpace(36),
                 Column(
@@ -71,8 +70,6 @@ class LoginScreen extends StatelessWidget {
 
 void validateThenDoLogin(BuildContext context) {
   if (context.read<LoginCubit>().formKey.currentState!.validate()) {
-    context.read<LoginCubit>().emitLoginStates(LoginRequestBody(
-        email: context.read<LoginCubit>().emailController.text,
-        password: context.read<LoginCubit>().passwordController.text));
+    context.read<LoginCubit>().emitLoginStates();
   }
 }

@@ -25,14 +25,14 @@ class TextStyles {
       fontSize: 10.8.sp,
       fontWeight: FontWeightHelper.regular);
 
-  static TextStyle font28BlueBold = TextStyle(
+  static TextStyle font24BlueBold = TextStyle(
       color: ColorManager.bule,
-      fontSize: 28.sp,
+      fontSize: 24.sp,
       fontWeight: FontWeightHelper.bold);
 
-  static TextStyle font14GruyRegular = TextStyle(
+  static TextStyle font13GruyRegular = TextStyle(
       color: ColorManager.grey,
-      fontSize: 14.sp,
+      fontSize: 13.4.sp,
       fontWeight: FontWeightHelper.regular);
 
   static TextStyle font14LighteRegular = TextStyle(

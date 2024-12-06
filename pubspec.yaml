@@ -60,6 +60,11 @@ dependencies:
   flutter_svg: ^2.0.15
   # for splash screen
   flutter_native_splash: ^2.4.3
+  # Flutter plugin for selecting images from the Android and iOS image library, and taking new pictures with the camera.
+  image_picker: ^1.1.2
+  # Geolocation plugin for Flutter. This plugin provides a cross-platform (iOS, Android) API for generic location (GPS etc.) functions.
+  geolocator: ^13.0.2
+  
 
 dev_dependencies:
   flutter_test:

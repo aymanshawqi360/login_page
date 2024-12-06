@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:login_app/core/theming/colors.dart';
 
 import '../theming/styles.dart';
@@ -16,7 +17,7 @@ class AppTextButton extends StatelessWidget {
       onPressed: onPressed,
       style: ButtonStyle(
         backgroundColor: WidgetStateProperty.all(ColorManager.bule),
-        minimumSize: WidgetStateProperty.all(const Size(double.maxFinite, 52)),
+        minimumSize: WidgetStateProperty.all(Size(double.maxFinite, 50.h)),
         tapTargetSize: MaterialTapTargetSize.shrinkWrap,
         shape: WidgetStateProperty.all(
             RoundedRectangleBorder(borderRadius: BorderRadius.circular(16))),
