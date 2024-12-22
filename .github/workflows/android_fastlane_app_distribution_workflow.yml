@@ -32,7 +32,7 @@ jobs:
         
     - name: Build and Distribute App
       env:
-        FIERBASE_CLI_TOKEN: ${{secrets.FIERBASE_CLI_TOKEN}}
+        FIERBASE_CLI_TOKEN: ${{ secrets.FIERBASE_CLI_TOKEN }}
       run: |
        fastlane android firebase_distribution
       working-directory: android
